@@ -100,12 +100,18 @@ def getProxyFromSource(sourcePath, httpProxy):
         return []
 
     for index, url in enumerate(sources):
-        sub_url = url
+        # sub_url = url
         if url.endswith(".md"):
             continue
         file = None
         try:
-            download = downloadFile(index + 1, url, httpProxy)
+            options = (
+                "emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=true&sort=true"
+            )
+
+            # url = f"https://url.v1.mk/sub?target=clash&url={sub_url}&insert=false&config={config_url}&{options}"
+            sub_url = f"https://api.dler.io/sub?target=clash&url={url}&{options}"
+            download = downloadFile(index + 1, sub_url, httpProxy)
             if download is not None:
                 file = yaml.safe_load(download)
             if (
@@ -120,32 +126,33 @@ def getProxyFromSource(sourcePath, httpProxy):
             else:
                 print(f"下载失败，请检查{url}是否有效")
         except yaml.YAMLError as e:
+            print(f"解析节点失败。 Error：{e}")
             # config_url = "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR/blob@master/Clash/config/ACL4SSR.ini"
             # options = "emoji=true&list=true&xudp=false&udp=true&tfo=false&expand=true&scv=true&fdn=true&new_name=true"
-            options = (
-                "emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=true&sort=true"
-            )
+            # options = (
+            #     "emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=true&sort=true"
+            # )
 
-            # url = f"https://url.v1.mk/sub?target=clash&url={sub_url}&insert=false&config={config_url}&{options}"
-            url = f"https://api.dler.io/sub?target=clash&url={sub_url}&{options}"
+            # # url = f"https://url.v1.mk/sub?target=clash&url={sub_url}&insert=false&config={config_url}&{options}"
+            # url = f"https://api.dler.io/sub?target=clash&url={sub_url}&{options}"
 
-            try:
-                download = downloadFile(index + 1, url, httpProxy)
-                if download is not None:
-                    file = yaml.safe_load(download)
-                if (
-                    file is not None
-                    and "proxies" in file
-                    and isinstance(file["proxies"], list)
-                    and file["proxies"]
-                ):
-                    proxyPool.extend(file["proxies"])
-                    print("成功获得节点")
-                else:
-                    print(f"下载失败，请检查{url}是否有效")
-            except yaml.YAMLError as e:
-                # logging.error(f"解析节点失败。 Error：{e}")
-                print(f"解析节点失败。 Error：{e}")
+            # try:
+            #     download = downloadFile(index + 1, url, httpProxy)
+            #     if download is not None:
+            #         file = yaml.safe_load(download)
+            #     if (
+            #         file is not None
+            #         and "proxies" in file
+            #         and isinstance(file["proxies"], list)
+            #         and file["proxies"]
+            #     ):
+            #         proxyPool.extend(file["proxies"])
+            #         print("成功获得节点")
+            #     else:
+            #         print(f"下载失败，请检查{url}是否有效")
+            # except yaml.YAMLError as e:
+            #     # logging.error(f"解析节点失败。 Error：{e}")
+            #     print(f"解析节点失败。 Error：{e}")
 
     print(f"原始获取节点数量: {len(proxyPool)}")
     proxies = removeNodes(proxyPool)
