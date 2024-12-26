@@ -103,11 +103,44 @@ def removeNotSupportType(proxyPool):  # 删除type不符合条件的节点
 # not_supprt_cipher_with_type = {}
 
 
+def removeNotSupportNode(proxyPool):  # 删除clash不支持的节点
+    notSupportItems = {
+        "cipher": ["ss", "chacha20-poly1305"],
+        "uuid": ["Free"],
+        "type": ["vless", "hysteria", "hysteria2"],
+    }
+
+    for item in notSupportItems.keys():
+        proxies = []
+        for proxy in proxyPool:
+            if item in proxy and proxy[item] in notSupportItems[item]:
+                continue
+            proxies.append(proxy)
+        proxyPool = proxies
+        print(f"after removeNotSupport_{item}, 剩余节点数量{len(proxies)}")
+
+    return proxies
+
+
+# TLS must be true with h2/grpc network in vmess
+def setTLSForVmess(proxyPool):
+    proxies = []
+    for proxy in proxyPool:
+        if proxy["type"] == "vmess" and "network" in proxy:
+            if proxy["network"] in ["grpc"]:
+                proxy["tls"] = True
+        proxies.append(proxy)
+
+    return proxies
+
+
 def removeNodes(proxyPool):
     proxies = removeDuplicateNode(proxyPool)
-    proxies = removeNotSupportCipher(proxies)
+    # proxies = removeNotSupportCipher(proxies)
     # proxies = removeNotSupportUUID(proxies)
-    proxies = removeNotSupportType(proxies)
+    # proxies = removeNotSupportType(proxies)
+    proxies = removeNotSupportNode(proxies)
+    proxies = setTLSForVmess(proxies)
 
     return proxies
 
