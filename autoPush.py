@@ -16,7 +16,7 @@ def pushRepo(retry):  # 将提交推送至github
     print(commitMessage)
     for i in range(retry):
         print(f"开始第{i + 1}次推送：", end="", flush=True)
-        message = repo.remotes.origin.push()
+        message = repo.remotes.origin.push("main")
 
         if not message.error:
             print("推送成功。")
