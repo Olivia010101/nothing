@@ -95,10 +95,13 @@ jobs:
       run: nohup ./mihomo -f ./proxypool/config.yaml > ./proxypool/mihomo.log 2>&1 &
 
     - name: test_delay
-      run: python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 1000 --timeout 1500 --nopush
+      run: |
+        python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 1000 --timeout 1500 --nopush --testurl https://www.youtube.com/generate_204
+        ./proxypool/lite --config ./proxypool/lite-speed.json --test ./proxypool/config.yaml
+        mv output.txt ./proxypool/retest_output.txt
 
 
-    - name: 提交测试
+    - name: 提交测速
       run: |
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
