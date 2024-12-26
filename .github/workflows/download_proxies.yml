@@ -35,18 +35,18 @@ jobs:
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
 
     - name: requirements
-      run: pip install -r ./proxypool/requirements.txt
+      run: pip install -r ./requirements.txt
 
 
     # sign netease
     - name: download_proxies_from_url
-      run: python ./proxypool/proxyPool.py --download --file ./proxypool/config.yaml --config ./proxypool/default.config --urlfile ./proxypool/source.url --nopush
+      run: python ./proxyPool.py --download --file ./clash/config.yaml --config ./clash/default.config --urlfile ./clash/source.url --nopush
     - name: 提交抓取
       run: |
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
         git pull origin main
-        git add proxypool/
+        git add clash
         git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 抓取节点"
     - name: 推送抓取
       uses: ad-m/github-push-action@master
@@ -66,27 +66,27 @@ jobs:
 
     - name: test_with_lite
       run: |
-        chmod +x ./proxypool/lite
-        ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./proxypool/config.yaml
-        ./proxypool/lite --config ./proxypool/lite-speed.json --test ./output.txt
-        cp output.txt ./proxypool/all_nodes.txt
-        base64 output.txt > ./proxypool/base64_all_nodes.txt
-        ./proxypool/lite --config ./proxypool/config.json --test ./output.txt
-        ./proxypool/lite --config ./proxypool/config.json --test ./output.txt
-        cp output.txt ./proxypool/speed_nodes.txt
-        base64 output.txt > ./proxypool/base64_speed_nodes.txt
+        chmod +x ./lite
+        ./lite --config ./clash/lite-pingonly.json --test ./clash/config.yaml
+        ./lite --config ./clash/lite-speed.json --test ./output.txt
+        cp output.txt ./all_nodes.txt
+        base64 output.txt > ./base64_all_nodes.txt
+        ./lite --config ./clash/config.json --test ./output.txt
+        ./lite --config ./clash/config.json --test ./output.txt
+        cp output.txt ./speed_nodes.txt
+        base64 output.txt > ./base64_speed_nodes.txt
       # - name: retest_with_lite
-      #   run: ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./output.txt && ./proxypool/lite --config ./proxypool/lite-speedonly.json --test ./output.txt
+      #   run: ./lite --config ./proxypool/lite-pingonly.json --test ./output.txt && ./proxypool/lite --config ./proxypool/lite-speedonly.json --test ./output.txt
 
       #   # - name: push_output.txt
-      #   #   run: mv output.txt ./proxypool/ && python ./proxypool/autoPush.py
+      #   #   run: mv output.txt ./ && python ./proxypool/autoPush.py
     - name: 提交lite筛选
       run: |
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
         git pull origin main
-        # mv output.txt ./proxypool/nodes.txt
-        git add proxypool/
+        # mv output.txt ./nodes.txt
+        git add clash
         git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 抓取节点"
     - name: 推送lite筛选
       uses: ad-m/github-push-action@master
@@ -96,30 +96,30 @@ jobs:
     - name: download_proxies_from_local_url
       run: |
         sleep 10
-        python ./proxypool/proxyPool.py --download --file ./proxypool/config.yaml --config ./proxypool/default.config --urlfile ./proxypool/source.url.local --nopush
+        python ./proxyPool.py --download --file ./clash/config.yaml --config ./clash/default.config --urlfile ./clash/source.url.local --nopush
 
     - name: run_mihomo
-      run: nohup ./mihomo -f ./proxypool/config.yaml > ./proxypool/mihomo.log 2>&1 &
+      run: nohup ./mihomo -f ./config.yaml > ./clash/mihomo.log 2>&1 &
 
     - name: test_delay
       run: |
-        python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 300 --timeout 1000 --nopush --testurl https://cp.cloudflare.com/generate_204
-        ./proxypool/lite --config ./proxypool/config.json --test ./proxypool/config.yaml
-        cp output.txt ./proxypool/retest_nodes.txt
-        base64 output.txt > ./proxypool/retest_base64.txt
+        python ./proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 300 --timeout 1000 --nopush --testurl https://cp.cloudflare.com/generate_204
+        ./lite --config ./clash/config.json --test ./clash/config.yaml
+        cp output.txt ./retest_nodes.txt
+        base64 output.txt > ./retest_base64.txt
 
     - name: retest_mihomo
       run: |
         killall mihomo
-        nohup ./mihomo -f ./proxypool/config.yaml > ./proxypool/mihomo.log 2>&1 &
-        python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 100 --timeout 1000 --nopush --testurl https://www.youtube.com/generate_204
+        nohup ./mihomo -f ./config.yaml > ./clash/mihomo.log 2>&1 &
+        python ./proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 100 --timeout 1000 --nopush --testurl https://www.youtube.com/generate_204
 
     - name: 提交测速
       run: |
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
         git pull origin main
-        git add proxypool/
+        git add clash
         git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 测速"
     - name: 推送更改
       uses: ad-m/github-push-action@master
