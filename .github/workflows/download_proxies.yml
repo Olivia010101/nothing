@@ -68,8 +68,9 @@ jobs:
       run: |
         chmod +x ./proxypool/lite
         ./proxypool/lite --config ./proxypool/config.json --test ./proxypool/config.yaml
-        ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./output.txt
-        ./proxypool/lite --config ./proxypool/lite-speed.json --test ./output.txt
+        mv output.txt ./proxypool/nodes.txt
+        # ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./output.txt
+        # ./proxypool/lite --config ./proxypool/lite-speed.json --test ./output.txt
         base64 output.txt > ./proxypool/base64_nodes.txt
       # - name: retest_with_lite
       #   run: ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./output.txt && ./proxypool/lite --config ./proxypool/lite-speedonly.json --test ./output.txt
@@ -81,7 +82,7 @@ jobs:
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
         git pull origin main
-        mv output.txt ./proxypool/nodes.txt
+        # mv output.txt ./proxypool/nodes.txt
         git add proxypool/
         git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 抓取节点"
     - name: 推送lite筛选
