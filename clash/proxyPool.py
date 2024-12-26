@@ -38,8 +38,8 @@ def downloadFile(index, url, httpProxy):
     except requests.exceptions.ConnectionError:
         print("Connection aborted")
     # protocol_pattern = r"^(?:http|https|socks4|socks5|ss|vmess|trojan|ssr|vless|ws)://"
-    if file is not None and protocol_regex.match(file) is not None:
-        file = base64.b64encode(file)
+    # if file is not None and protocol_regex.match(file) is not None:
+    #     file = base64.b64encode(file)
 
     return file
 
@@ -103,15 +103,19 @@ def getProxyFromSource(sourcePath, httpProxy):
         # sub_url = url
         if url.endswith(".md"):
             continue
+        # downloa= None
         file = None
         try:
-            options = (
-                "emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=true&sort=true"
-            )
+            download = downloadFile(index + 1, url, httpProxy)
+            if download is None or re.match(r"^(?:proxies):", download) is None:
 
-            # url = f"https://url.v1.mk/sub?target=clash&url={sub_url}&insert=false&config={config_url}&{options}"
-            sub_url = f"https://api.dler.io/sub?target=clash&url={url}&{options}"
-            download = downloadFile(index + 1, sub_url, httpProxy)
+                options = "emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=true&sort=true"
+
+                # url = f"https://url.v1.mk/sub?target=clash&url={sub_url}&insert=false&config={config_url}&{options}"
+                if download is not None and protocol_regex.match(download) is not None:
+                    url = base64.b64encode(download)
+                sub_url = f"https://api.dler.io/sub?target=clash&url={url}&{options}"
+                download = downloadFile(index + 1, sub_url, httpProxy)
             if download is not None:
                 file = yaml.safe_load(download)
             if (
