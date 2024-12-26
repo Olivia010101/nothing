@@ -76,7 +76,9 @@ jobs:
       #   # - name: push_output.txt
       #   #   run: mv output.txt ./proxypool/ && python ./proxypool/autoPush.py
     - name: download_proxies_from_local_url
-      run: python ./proxypool/proxyPool.py --download --file ./proxypool/config.yaml --config ./proxypool/default.config --urlfile ./proxypool/source.url.local --nopush
+      run: |
+        sleep 30
+        python ./proxypool/proxyPool.py --download --file ./proxypool/config.yaml --config ./proxypool/default.config --urlfile ./proxypool/source.url.local --nopush
     - name: 提交lite筛选
       run: |
         git config --local user.email "actions@github.com"
