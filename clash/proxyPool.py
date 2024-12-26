@@ -112,8 +112,8 @@ def getProxyFromSource(sourcePath, httpProxy):
                 options = "emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=true&sort=true"
 
                 # url = f"https://url.v1.mk/sub?target=clash&url={sub_url}&insert=false&config={config_url}&{options}"
-                if download is not None and protocol_regex.match(download) is not None:
-                    url = base64.b64encode(download)
+                # if download is not None and protocol_regex.match(download) is not None:
+                #     url = base64.b64encode(download)
                 sub_url = f"https://api.dler.io/sub?target=clash&url={url}&{options}"
                 download = downloadFile(index + 1, sub_url, httpProxy)
             if download is not None:
