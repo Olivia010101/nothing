@@ -117,6 +117,17 @@ jobs:
         base64 ./clash/retest_vmess.txt > ./clash/base64_vmess.txt
         cat ./clash/retest_nodes.txt | grep -E 'ssr://' > ./clash/retest_ssr.txt
         base64 ./clash/retest_ssr.txt > ./clash/base64_ssr.txt
+    - name: 提交base64文件
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git pull origin main
+        git add clash
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 测速"
+    - name: 推送base64文件
+      uses: ad-m/github-push-action@master
+      with:
+        branch: main
     - name: retest_mihomo
       run: |
         killall mihomo
