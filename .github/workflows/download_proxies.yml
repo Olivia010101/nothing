@@ -68,10 +68,10 @@ jobs:
       run: |
         chmod +x ./proxypool/lite
         ./proxypool/lite --config ./proxypool/config.json --test ./proxypool/config.yaml
+        base64 output.txt > ./proxypool/base64_nodes.txt
         mv output.txt ./proxypool/nodes.txt
         # ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./output.txt
         # ./proxypool/lite --config ./proxypool/lite-speed.json --test ./output.txt
-        base64 output.txt > ./proxypool/base64_nodes.txt
       # - name: retest_with_lite
       #   run: ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./output.txt && ./proxypool/lite --config ./proxypool/lite-speedonly.json --test ./output.txt
 
