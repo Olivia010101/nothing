@@ -103,11 +103,13 @@ def getProxyFromSource(sourcePath, httpProxy):
         sub_url = url
         if url.endswith(".md"):
             continue
+        file = None
         try:
             download = downloadFile(index + 1, url, httpProxy)
-            file = yaml.safe_load(download)
+            if download is not None:
+                file = yaml.safe_load(download)
             if (
-                file
+                file is not None
                 and "proxies" in file
                 and isinstance(file["proxies"], list)
                 and file["proxies"]
@@ -129,9 +131,10 @@ def getProxyFromSource(sourcePath, httpProxy):
 
             try:
                 download = downloadFile(index + 1, url, httpProxy)
-                file = yaml.safe_load(download)
+                if download is not None:
+                    file = yaml.safe_load(download)
                 if (
-                    file
+                    file is not None
                     and "proxies" in file
                     and isinstance(file["proxies"], list)
                     and file["proxies"]
