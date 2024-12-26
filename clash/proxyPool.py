@@ -99,8 +99,10 @@ def getProxyFromSource(sourcePath, httpProxy):
         if download is None:
             if not url.endswith(".yaml") or not url.endswith(".yml"):
                 config_url = "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR/blob@master/Clash/config/ACL4SSR.ini"
-                options = "emoji=true&list=true&xudp=false&udp=true&tfo=false&expand=true&scv=true&fdn=true&new_name=true"
-                url = f"https://url.v1.mk/sub?target=clash&url={sub_url}&insert=false&config={config_url}&{options}"
+                # options = "emoji=true&list=true&xudp=false&udp=true&tfo=false&expand=true&scv=true&fdn=true&new_name=true"
+                options = "emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=true&sort=false"
+                # url = f"https://url.v1.mk/sub?target=clash&url={sub_url}&insert=false&config={config_url}&{options}"
+                url = f"https://api.dler.io/sub?target=clash&url={sub_url}&config={config_url}&{options}"
                 download = downloadFile(index + 1, url, httpProxy)
 
         if download is None:
