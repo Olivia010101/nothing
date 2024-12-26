@@ -5,7 +5,7 @@
   "sortMethod": "rspeed",
   "concurrency": 1024,
   "testMode": 2,
-  "timeout": 15,
+  "timeout": 10,
   "fontSize": 24,
   "outputMode": 4,
   "unique": true,
