@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import re
 
 import aiohttp
 import yaml
@@ -129,6 +130,19 @@ def setTLSForVmess(proxyPool):
         if proxy["type"] == "vmess" and "network" in proxy:
             if proxy["network"] in ["grpc"]:
                 proxy["tls"] = True
+        proxies.append(proxy)
+
+    return proxies
+
+
+def removeNodesByNames(proxyPool):
+    # 正则表达式关键词匹配
+    # 匹配规则：
+    regex = [".*google.*", ".*youtube.*"]
+    proxies = []
+    for proxy in proxyPool:
+        if any(regexMatch in proxy["name"] for regexMatch in regex):
+            continue
         proxies.append(proxy)
 
     return proxies
