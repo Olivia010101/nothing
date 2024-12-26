@@ -100,6 +100,11 @@ jobs:
         ./proxypool/lite --config ./proxypool/lite-speed.json --test ./proxypool/config.yaml
         mv output.txt ./proxypool/retest_output.txt
 
+    - name: retest_mihomo
+      run: |
+        killall mihomo
+        nohup ./mihomo -f ./proxypool/config.yaml > ./proxypool/mihomo.log 2>&1 &
+        python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 1000 --timeout 1500 --nopush --testurl https://www.youtube.com/generate_204
 
     - name: 提交测速
       run: |
