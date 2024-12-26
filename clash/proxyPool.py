@@ -1,4 +1,6 @@
 import argparse
+import base64
+import re
 import sys
 
 import requests
@@ -9,6 +11,10 @@ sys.path.append(".")
 from autoPush import pushRepo
 from createConfigYaml import *
 from processProxy import *
+
+protocol_regex = re.compile(
+    r"^(?:http|https|socks4|socks5|ss|vmess|trojan|ssr|vless|ws)://"
+)
 
 
 def downloadFile(index, url, httpProxy):
@@ -31,6 +37,9 @@ def downloadFile(index, url, httpProxy):
         print("Invalid URL: url")
     except requests.exceptions.ConnectionError:
         print("Connection aborted")
+    # protocol_pattern = r"^(?:http|https|socks4|socks5|ss|vmess|trojan|ssr|vless|ws)://"
+    if protocol_regex.match(file) is not None:
+        file = base64.b64encode(file)
 
     return file
 
@@ -94,22 +103,8 @@ def getProxyFromSource(sourcePath, httpProxy):
         sub_url = url
         if url.endswith(".md"):
             continue
-
-        download = downloadFile(index + 1, url, httpProxy)
-        if download is None:
-            if not url.endswith(".yaml") or not url.endswith(".yml"):
-                config_url = "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR/blob@master/Clash/config/ACL4SSR.ini"
-                # options = "emoji=true&list=true&xudp=false&udp=true&tfo=false&expand=true&scv=true&fdn=true&new_name=true"
-                options = "emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=true&sort=false"
-                # url = f"https://url.v1.mk/sub?target=clash&url={sub_url}&insert=false&config={config_url}&{options}"
-                url = f"https://api.dler.io/sub?target=clash&url={sub_url}&config={config_url}&{options}"
-                download = downloadFile(index + 1, url, httpProxy)
-
-        if download is None:
-            print(f"下载文件 {url} 失败")
-            continue
-
         try:
+            download = downloadFile(index + 1, url, httpProxy)
             file = yaml.safe_load(download)
             if (
                 file
@@ -120,12 +115,29 @@ def getProxyFromSource(sourcePath, httpProxy):
                 proxyPool.extend(file["proxies"])
                 # logging.info("成功获得节点")
                 print("成功获得节点")
-            # else:
-            #     # logging.warning("节点数据为空或格式不正确")
-            #     print("成功获得节点")
         except yaml.YAMLError as e:
-            # logging.error(f"解析节点失败。 Error：{e}")
-            print(f"解析节点失败。 Error：{e}")
+            config_url = "https://fastly.jsdelivr.net/gh/ACL4SSR/ACL4SSR/blob@master/Clash/config/ACL4SSR.ini"
+            # options = "emoji=true&list=true&xudp=false&udp=true&tfo=false&expand=true&scv=true&fdn=true&new_name=true"
+            options = (
+                "emoji=true&list=true&udp=true&tfo=false&scv=false&fdn=true&sort=false"
+            )
+            # url = f"https://url.v1.mk/sub?target=clash&url={sub_url}&insert=false&config={config_url}&{options}"
+            url = f"https://api.dler.io/sub?target=clash&url={sub_url}&config={config_url}&{options}"
+
+            try:
+                download = downloadFile(index + 1, url, httpProxy)
+                file = yaml.safe_load(download)
+                if (
+                    file
+                    and "proxies" in file
+                    and isinstance(file["proxies"], list)
+                    and file["proxies"]
+                ):
+                    proxyPool.extend(file["proxies"])
+                    print("成功获得节点")
+            except yaml.YAMLError as e:
+                # logging.error(f"解析节点失败。 Error：{e}")
+                print(f"解析节点失败。 Error：{e}")
 
     print(f"原始获取节点数量: {len(proxyPool)}")
     proxies = removeNodes(proxyPool)
