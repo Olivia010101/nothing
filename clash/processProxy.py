@@ -58,7 +58,7 @@ def removeNotSupportCipher(
         if "cipher" in proxy and proxy["cipher"] in notSupportCipher:
             continue
         if (
-            not ignoreIssueCipher
+            ignoreIssueCipher
             and proxy["type"] in notSupportCipherWithType.keys()
             and proxy["cipher"] in notSupportCipherWithType[proxy["type"]]
         ):
@@ -136,9 +136,9 @@ def setTLSForVmess(proxyPool):
 
 def removeNodes(proxyPool):
     proxies = removeDuplicateNode(proxyPool)
-    # proxies = removeNotSupportCipher(proxies)
+    proxies = removeNotSupportCipher(proxies, ignoreIssueCipher=True)
     # proxies = removeNotSupportUUID(proxies)
-    # proxies = removeNotSupportType(proxies)
+    proxies = removeNotSupportType(proxies)
     proxies = removeNotSupportNode(proxies)
     proxies = setTLSForVmess(proxies)
 
