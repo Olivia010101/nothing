@@ -70,21 +70,18 @@ jobs:
         ./proxypool/lite --config ./proxypool/config.json --test ./proxypool/config.yaml
         ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./output.txt
         ./proxypool/lite --config ./proxypool/lite-speed.json --test ./output.txt
+        base64 output.txt > ./proxypool/base64_nodes.txt
       # - name: retest_with_lite
       #   run: ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./output.txt && ./proxypool/lite --config ./proxypool/lite-speedonly.json --test ./output.txt
 
       #   # - name: push_output.txt
       #   #   run: mv output.txt ./proxypool/ && python ./proxypool/autoPush.py
-    - name: download_proxies_from_local_url
-      run: |
-        sleep 30
-        python ./proxypool/proxyPool.py --download --file ./proxypool/config.yaml --config ./proxypool/default.config --urlfile ./proxypool/source.url.local --nopush
     - name: 提交lite筛选
       run: |
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
         git pull origin main
-        mv output.txt ./proxypool/
+        mv output.txt ./proxypool/nodes.txt
         git add proxypool/
         git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 抓取节点"
     - name: 推送lite筛选
@@ -92,6 +89,10 @@ jobs:
       with:
         branch: main
 
+    - name: download_proxies_from_local_url
+      run: |
+        sleep 30
+        python ./proxypool/proxyPool.py --download --file ./proxypool/config.yaml --config ./proxypool/default.config --urlfile ./proxypool/source.url.local --nopush
 
     - name: run_mihomo
       run: nohup ./mihomo -f ./proxypool/config.yaml > ./proxypool/mihomo.log 2>&1 &
@@ -100,7 +101,8 @@ jobs:
       run: |
         python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 500 --timeout 1500 --nopush --testurl https://cp.cloudflare.com/generate_204
         ./proxypool/lite --config ./proxypool/lite-speed.json --test ./proxypool/config.yaml
-        mv output.txt ./proxypool/retest_output.txt
+        mv output.txt ./proxypool/retest_nodes.txt
+        base64 output.txt > ./proxypool/retest_base64.txt
 
     - name: retest_mihomo
       run: |
