@@ -38,7 +38,7 @@ def downloadFile(index, url, httpProxy):
     except requests.exceptions.ConnectionError:
         print("Connection aborted")
     # protocol_pattern = r"^(?:http|https|socks4|socks5|ss|vmess|trojan|ssr|vless|ws)://"
-    if protocol_regex.match(file) is not None:
+    if file is not None and protocol_regex.match(file) is not None:
         file = base64.b64encode(file)
 
     return file
