@@ -72954,6 +72954,1003 @@ proxies:
     headers:
       Host: za.ylks.xyz
     path: //
+- name: 美国(nodeshare.xyz免费节点)
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.17.2.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 2
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.17.13.218
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 3
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.17.70.161
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 4
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.19.179.218
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 5
+  password: NISHIKUITAN111
+  port: 443
+  server: 103.21.244.6
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 6
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.16.120.91
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 7
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.18.198.40
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 8
+  password: NISHIKUITAN111
+  port: 443
+  server: 5.10.244.100
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 9
+  password: NISHIKUITAN111
+  port: 443
+  server: 190.93.245.80
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 10
+  password: NISHIKUITAN111
+  port: 443
+  server: 190.93.245.109
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 11
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.18.144.43
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 12
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.18.215.15
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 13
+  password: NISHIKUITAN111
+  port: 443
+  server: 141.101.122.171
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 14
+  password: NISHIKUITAN111
+  port: 443
+  server: 188.114.96.86
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 15
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.25.37.16
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 16
+  password: NISHIKUITAN111
+  port: 443
+  server: 185.193.29.193
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 17
+  password: NISHIKUITAN111
+  port: 443
+  server: 190.93.245.75
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 18
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.19.95.55
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 19
+  password: NISHIKUITAN111
+  port: 443
+  server: 172.67.229.209
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 20
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.18.19.56
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 21
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.21.18.51
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 22
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.26.9.255
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 23
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.16.180.84
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 24
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.19.247.200
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 25
+  network: ws
+  port: 443
+  server: 172.67.64.57
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- name: 美国(nodeshare.xyz免费节点) 26
+  password: NISHIKUITAN111
+  port: 443
+  server: 172.67.23.69
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 27
+  password: NISHIKUITAN111
+  port: 443
+  server: 155.46.213.156
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 28
+  password: NISHIKUITAN111
+  port: 443
+  server: 198.41.203.228
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 29
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.20.216.58
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 乌克兰(nodeshare.xyz免费节点)
+  password: NISHIKUITAN111
+  port: 443
+  server: 31.43.179.32
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 30
+  password: NISHIKUITAN111
+  port: 443
+  server: 103.21.244.240
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 34
+  network: ws
+  port: 2082
+  server: 190.93.244.228
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 36
+  network: ws
+  port: 443
+  server: 104.24.223.201
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 38
+  network: ws
+  port: 443
+  server: 172.67.77.135
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 39
+  network: ws
+  port: 443
+  server: 104.25.69.174
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 40
+  network: ws
+  port: 443
+  server: 162.159.136.60
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 42
+  network: ws
+  port: 443
+  server: 104.22.15.82
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 43
+  network: ws
+  port: 443
+  server: 162.159.137.222
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 44
+  network: ws
+  port: 443
+  server: 162.159.142.42
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 45
+  network: ws
+  port: 443
+  server: 172.67.86.81
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 46
+  network: ws
+  port: 2082
+  server: 190.93.246.178
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 47
+  network: ws
+  port: 443
+  server: 104.21.120.235
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 48
+  network: ws
+  port: 443
+  server: 104.25.220.166
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 49
+  network: ws
+  port: 443
+  server: 172.67.88.20
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 50
+  network: ws
+  port: 443
+  server: 172.67.65.1
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 51
+  network: ws
+  port: 443
+  server: 104.24.53.200
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 52
+  network: ws
+  port: 443
+  server: 104.24.193.150
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 53
+  network: ws
+  port: 443
+  server: 104.22.60.103
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 54
+  network: ws
+  port: 443
+  server: 104.20.143.224
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 55
+  network: ws
+  port: 443
+  server: 172.64.159.103
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 56
+  network: ws
+  port: 2082
+  server: 185.193.31.108
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 57
+  network: ws
+  port: 443
+  server: 104.20.241.146
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 58
+  network: ws
+  port: 443
+  server: 104.20.173.91
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 59
+  network: ws
+  port: 443
+  server: 172.64.153.76
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 60
+  network: ws
+  port: 443
+  server: 104.25.146.16
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 法国(nodeshare.xyz免费节点)
+  network: ws
+  port: 443
+  server: 45.80.111.9
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 63
+  network: ws
+  port: 443
+  server: 104.20.29.211
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 64
+  network: ws
+  port: 443
+  server: 172.67.226.5
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 66
+  network: ws
+  port: 443
+  server: 162.159.129.108
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 68
+  network: ws
+  port: 443
+  server: 104.25.200.44
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 69
+  network: ws
+  port: 443
+  server: 172.64.142.229
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 70
+  network: ws
+  port: 2082
+  server: 190.93.244.64
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- cipher: aes-256-gcm
+  name: 俄罗斯(nodeshare.xyz免费节点)
+  password: dongtaiwang.com
+  port: 32233
+  server: 185.22.152.125
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 71
+  network: ws
+  port: 443
+  server: 104.20.111.73
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 俄罗斯(nodeshare.xyz免费节点) 2
+  password: 3MgIhqwp4pjM8SKwixNkYZ
+  port: 33068
+  server: 193.124.22.253
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 72
+  network: ws
+  port: 443
+  server: 162.159.140.3
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 74
+  network: ws
+  port: 2082
+  server: 190.93.245.174
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 75
+  network: ws
+  port: 2082
+  server: japan.com
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip16.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 76
+  network: ws
+  port: 443
+  server: 104.24.174.44
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 78
+  network: ws
+  port: 443
+  server: 104.27.11.247
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 79
+  network: ws
+  port: 2082
+  server: 190.93.244.33
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 81
+  network: ws
+  port: 443
+  server: 104.20.43.152
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 64
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 82
+  port: 58002
+  server: 120.232.153.27
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 83
+  network: ws
+  port: 443
+  server: 69.48.218.58
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 84
+  network: ws
+  port: 2082
+  server: 156.238.18.33
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 85
+  network: ws
+  port: 2082
+  server: 104.254.140.141
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- cipher: chacha20-ietf-poly1305
+  name: 俄罗斯(nodeshare.xyz免费节点) 3
+  password: 6OAGLD+DOA6UcFp5Udf0r/UzyjwHV+yheNkoFDk6uL8=
+  port: 38753
+  server: 213.108.22.109
+  type: ss
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 86
+  network: ws
+  port: 443
+  server: 172.67.47.82
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 87
+  network: ws
+  port: 443
+  server: 104.27.27.49
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 89
+  network: ws
+  port: 2082
+  server: 190.93.245.168
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 90
+  network: ws
+  port: 2082
+  server: 190.93.247.127
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 5f3f09ad-89cb-4e94-a7ad-aa8239913555
+  ws-opts:
+    headers:
+      Host: ip18.6929198.xyz
+    path: /github.com/Alvin9999
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 91
+  network: ws
+  port: 443
+  server: 104.25.143.12
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- name: 美国(nodeshare.xyz免费节点) 92
+  password: NISHIKUITAN111
+  port: 443
+  server: 141.11.202.133
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- name: 美国(nodeshare.xyz免费节点) 93
+  password: NISHIKUITAN111
+  port: 443
+  server: 188.164.158.111
+  skip-cert-verify: true
+  type: trojan
+  udp: true
+- alterId: 0
+  cipher: auto
+  name: 美国(nodeshare.xyz免费节点) 94
+  network: ws
+  port: 443
+  server: 104.22.57.38
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: af6eedf5-f2b4-447f-8b93-5fca33af06f8
+  ws-opts:
+    headers:
+      Host: f.ylks.xyz
+    path: /
+- name: 美国(nodeshare.xyz免费节点) 95
+  password: NISHIKUITAN111
+  port: 443
+  server: 104.18.223.98
+  skip-cert-verify: true
+  type: trojan
+  udp: true
 - cipher: chacha20-ietf-poly1305
   name: 🇺🇸_US_美国_1
   password: xjzsiMfTByKjA9URbdXWNp
@@ -73188,20 +74185,33 @@ proxies:
   country: 🇨🇳 CN
   h2-opts: {}
   http-opts: {}
-  name: 🇨🇳 CN_309
+  name: 🇨🇳 CN_306
   network: tcp
   port: 50002
-  server: 47.92.152.169
+  server: 114.55.132.202
   skip-cert-verify: true
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-path: /
+  ws-path: github.com/Alvin9999
 - alterId: 64
   cipher: auto
   country: 🇨🇳 CN
   h2-opts: {}
   http-opts: {}
-  name: 🇨🇳 CN_310
+  name: 🇨🇳 CN_308
+  network: tcp
+  port: 50004
+  server: 112.132.212.19
+  skip-cert-verify: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-path: /afrhms16v.bestxray.buzz/linkws
+- alterId: 64
+  cipher: auto
+  country: 🇨🇳 CN
+  h2-opts: {}
+  http-opts: {}
+  name: 🇨🇳 CN_309
   network: tcp
   port: 50002
   server: 112.132.215.12
@@ -73215,20 +74225,20 @@ proxies:
   country: 🇨🇳 CN
   h2-opts: {}
   http-opts: {}
-  name: 🇨🇳 CN_311
+  name: 🇨🇳 CN_310
   network: tcp
-  port: 50004
-  server: 112.132.212.19
+  port: 50002
+  server: 47.92.152.169
   skip-cert-verify: true
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-path: /afrhms16v.bestxray.buzz/linkws
+  ws-path: /
 - alterId: 64
   cipher: auto
   country: 🇨🇳 CN
   h2-opts: {}
   http-opts: {}
-  name: 🇨🇳 CN_312
+  name: 🇨🇳 CN_311
   network: tcp
   port: 59003
   server: 183.236.51.36
@@ -73236,104 +74246,118 @@ proxies:
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
   ws-path: /
-- alterId: 64
-  cipher: auto
-  country: 🇨🇳 CN
-  h2-opts: {}
-  http-opts: {}
-  name: 🇨🇳 CN_314
-  network: tcp
-  port: 50002
-  server: 114.55.132.202
-  skip-cert-verify: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-path: github.com/Alvin9999
-- alterId: 0
-  cipher: auto
-  country: 🇮🇷 IR
-  h2-opts: {}
-  http-opts: {}
-  name: 🇮🇷 IR_418
-  network: ws
-  port: 443
-  server: 2.189.59.2
-  servername: obdii.cfd
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  ws-headers:
-    HOST: obdii.cfd
-  ws-path: /linkws
-- alterId: 0
-  cipher: auto
-  country: 🇮🇷 IR
-  h2-opts: {}
-  http-opts: {}
-  name: 🇮🇷 IR_420
-  network: ws
-  port: 443
-  server: 2.189.59.4
-  servername: obdii.cfd
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  ws-headers:
-    HOST: obdii.cfd
-  ws-path: /linkws
-- alterId: 0
-  cipher: auto
-  country: 🇰🇷 KR
-  h2-opts: {}
-  http-opts: {}
-  name: 🇰🇷 KR_422
-  network: tcp
-  port: 15074
-  server: 15074.kuaiyin02.top
-  servername: 15074.kuaiyin02.top
-  skip-cert-verify: true
-  type: vmess
-  uuid: 9f513161-576b-3abc-9c98-06e52c3a24c6
-  ws-path: /
-- alterId: 0
-  cipher: auto
-  country: 🇰🇷 KR
-  h2-opts: {}
-  http-opts: {}
-  name: 🇰🇷 KR_423
-  network: ws
-  port: 30002
-  server: 211.220.16.114
-  servername: obdii.cfd
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
-  ws-headers:
-    HOST: obdii.cfd
-  ws-path: /linkws
 - cipher: chacha20-ietf-poly1305
   country: 🇷🇺 RU
-  name: 🇷🇺 RU_484
+  name: 🇷🇺 RU_465
   password: oVfvPkqJFCjOEbBsbmOtIiAuqgmEFOEf332F26C8lwEwQng9
   port: 31348
   server: 213.156.138.138
   type: ss
 - cipher: chacha20-ietf-poly1305
   country: 🇷🇺 RU
-  name: 🇷🇺 RU_485
+  name: 🇷🇺 RU_469
   password: uQS5ntVqC00sSKkeNzUiD3
   port: 42090
   server: 89.23.103.125
   type: ss
+- alterId: 0
+  cipher: auto
+  country: 🇸🇬 SG
+  h2-opts: {}
+  http-opts: {}
+  name: 🇸🇬 SG_491
+  network: ws
+  port: 443
+  server: 8.222.222.223
+  servername: beyonddsz.cfd
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
+  ws-headers:
+    HOST: beyonddsz.cfd
+  ws-path: /linkws
+- alterId: 0
+  cipher: auto
+  country: 🇸🇬 SG
+  h2-opts: {}
+  http-opts: {}
+  name: 🇸🇬 SG_493
+  network: ws
+  port: 443
+  server: 8.222.252.136
+  servername: beyonddsz.cfd
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
+  ws-headers:
+    HOST: beyonddsz.cfd
+  ws-path: /linkws
+- alterId: 0
+  cipher: auto
+  country: 🇸🇬 SG
+  h2-opts: {}
+  http-opts: {}
+  name: 🇸🇬 SG_494
+  network: ws
+  port: 443
+  server: 8.222.144.99
+  servername: beyonddsz.cfd
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
+  ws-headers:
+    HOST: beyonddsz.cfd
+  ws-path: /linkws
+- alterId: 0
+  cipher: auto
+  country: 🇸🇬 SG
+  h2-opts: {}
+  http-opts: {}
+  name: 🇸🇬 SG_497
+  network: ws
+  port: 443
+  server: 8.222.178.195
+  servername: beyonddsz.cfd
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
+  ws-headers:
+    HOST: beyonddsz.cfd
+  ws-path: /linkws
+- cipher: chacha20-ietf-poly1305
+  country: 🇺🇸 US
+  name: 🇺🇸 US_537
+  password: u17T3BvpYaaiuW2c
+  port: 443
+  server: api.namasha.co
+  type: ss
+- alterId: 0
+  cipher: auto
+  country: 🇺🇸 US
+  h2-opts: {}
+  http-opts: {}
+  name: 🇺🇸 US_576
+  network: ws
+  port: 443
+  server: 138.2.143.240
+  servername: beyonddsz.cfd
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 9b456c2a-f2c1-45e1-87a9-b7628b04bb24
+  ws-headers:
+    HOST: beyonddsz.cfd
+  ws-path: /linkws
 - alterId: 64
   cipher: auto
   country: 🇺🇸 US
   h2-opts: {}
   http-opts: {}
-  name: 🇺🇸 US_580
+  name: 🇺🇸 US_606
   network: tcp
   port: 52143
   server: 142.4.104.33
@@ -73343,81 +74367,31 @@ proxies:
   ws-path: /
 - alterId: 0
   cipher: auto
-  country: 🇺🇸 US
+  country: 🏁ZZ
   h2-opts: {}
   http-opts: {}
-  name: 🇺🇸 US_587
-  network: ws
-  port: 443
-  server: tls.99.node-for-bigairport.win
-  servername: tls.99.node-for-bigairport.win
+  name: 🏁ZZ_845
+  network: tcp
+  port: 22324
+  server: 23.162.200.182
   skip-cert-verify: true
-  tls: true
   type: vmess
-  uuid: ef5fca10-41bc-4623-87a3-1170a7b51827
-  ws-headers:
-    HOST: tls.99.node-for-bigairport.win
-  ws-path: /
-- alterId: 0
-  cipher: auto
-  country: 🇺🇸 US
-  h2-opts: {}
-  http-opts: {}
-  name: 🇺🇸 US_597
-  network: ws
-  port: 443
-  server: 104.21.13.125
-  servername: afrhms16v.bestxray.buzz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
-  ws-headers:
-    HOST: afrhms16v.bestxray.buzz
-  ws-path: /linkws
-- alterId: 0
-  cipher: auto
-  country: 🇺🇸 US
-  h2-opts: {}
-  http-opts: {}
-  name: 🇺🇸 US_602
-  network: ws
-  port: 443
-  server: parsvds.ir
-  servername: hms19.best-tizi.top
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 62aa5f80-0328-4004-a375-7f5a59df4022
-  ws-headers:
-    HOST: hms19.best-tizi.top
-  ws-path: /linkws
+  uuid: 04621bae-ab36-11ec-b909-0242ac120002
+- cipher: chacha20-ietf-poly1305
+  name: '[ss]🇰🇷KR1424|0.8mb/s'
+  password: d4eeaa7b-43c6-49dc-8020-7389bba4d033
+  port: 40016
+  server: hzhz2.sssyun.xyz
+  type: ss
 - cipher: chacha20-ietf-poly1305
   name: '[ss]🇭🇰HK2887'
   password: MB9JPCHgZtwzQZ2jy3gMrz2fCIjT6M4FJMbfemIc4XCBcplL
   port: 51348
   server: 74.119.193.157
   type: ss
-- alterId: 64
-  cipher: auto
-  name: '[vmess]🇺🇸US2941|3.4mb/s'
-  network: ws
-  port: 31003
-  server: 192.74.240.101
-  servername: www.73276259.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: false
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-opts:
-    headers:
-      Edge: ''
-      Host: 192.74.240.101
-    path: /path/1733651459092
 - alterId: 0
   cipher: auto
-  name: '[vmess]🇷🇺RU3234'
+  name: '[vmess]🇷🇺RU3233'
   network: ws
   port: 29025
   server: 195.58.49.42
@@ -73426,7 +74400,7 @@ proxies:
   tls: false
   type: vmess
   udp: true
-  uuid: b0c478e9-972f-4af6-aadb-f4f6e457e35f
+  uuid: e561fdb8-737c-4423-a72c-7831b7d3739d
   ws-opts:
     headers:
       Edge: ''
@@ -73855,6 +74829,21 @@ proxies:
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
+  name: Relay_-🇺🇸US_815
+  network: ws
+  port: 443
+  server: 104.21.13.125
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: f584de15-2034-4170-a723-f48c2bae5e0f
+  ws-opts:
+    path: /linkws
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
   name: Relay_-🇩🇪DE_820
   network: ws
   port: 443
@@ -73901,15 +74890,6 @@ proxies:
     headers:
       Host: de-new01.daluquan.top
     path: /
-- cipher: chacha20-ietf-poly1305
-  client-fingerprint: chrome
-  name: Relay_🇦🇪AE-🇦🇪AE_861
-  password: u17T3BvpYaaiuW2c
-  port: 443
-  server: api.namasha.co
-  tfo: false
-  type: ss
-  udp: true
 - cipher: chacha20-ietf-poly1305
   client-fingerprint: chrome
   name: Relay_🇦🇪AE-🇦🇪AE_862
@@ -75489,6 +76469,24 @@ proxies:
   uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
   ws-opts:
     path: /eisasqa
+- alterId: 0
+  cipher: auto
+  client-fingerprint: chrome
+  name: 🇺🇸 Relay_🇺🇸US-🇺🇸US_2159
+  network: ws
+  port: 443
+  server: tls.99.node-for-bigairport.win
+  servername: tls.99.node-for-bigairport.win
+  skip-cert-verify: true
+  tfo: false
+  tls: true
+  type: vmess
+  udp: true
+  uuid: ef5fca10-41bc-4623-87a3-1170a7b51827
+  ws-opts:
+    headers:
+      Host: tls.99.node-for-bigairport.win
+    path: /
 - alterId: 64
   cipher: auto
   client-fingerprint: chrome
@@ -75612,18 +76610,6 @@ proxies:
     headers:
       Host: api-ipv4.ip.sb
     path: /
-- alterId: 0
-  cipher: auto
-  client-fingerprint: chrome
-  name: ZZ_2255
-  port: 22324
-  server: 23.162.200.182
-  skip-cert-verify: true
-  tfo: false
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 04621bae-ab36-11ec-b909-0242ac120002
 - alterId: 0
   cipher: auto
   client-fingerprint: chrome
@@ -77613,6 +78599,18 @@ proxies:
   udp: true
 - alterId: 0
   cipher: auto
+  name: 伊朗_由快嘴科技提供：kkzui.com93
+  network: ws
+  port: 443
+  server: 2.189.59.2
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  ws-opts:
+    path: ''
+- alterId: 0
+  cipher: auto
   name: 荷兰_由快嘴科技提供：kkzui.com118
   network: tcp
   port: 41333
@@ -78043,6 +79041,16 @@ proxies:
   tls: false
   type: vmess
   uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+- alterId: 0
+  cipher: auto
+  name: 中转节点-113.1KB/s
+  network: tcp
+  port: 15074
+  server: 15074.kuaiyin02.top
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  uuid: 9f513161-576b-3abc-9c98-06e52c3a24c6
 - alterId: 0
   cipher: auto
   name: 未知国家-2.70MB/s
@@ -79272,14 +80280,6 @@ proxies:
   sni: q08m.vgraxiw73s.hasyaf.cn
   type: trojan
   udp: true
-- alterId: '64'
-  cipher: auto
-  name: NO119
-  network: tcp
-  port: '58002'
-  server: 120.232.153.27
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
 - cipher: chacha20-ietf-poly1305
   country: 🇨🇳CN
   name: NO120
@@ -79412,13 +80412,6 @@ proxies:
   type: vmess
   udp: true
   uuid: b552f1d3-9ca2-4221-b369-7954e3465a0c
-- alterId: -1
-  cipher: chacha20-ietf-poly1305
-  name: NO188
-  password: 3MgIhqwp4pjM8SKwixNkYZ
-  port: 33068
-  server: 193.124.22.253
-  type: ss
 - alterId: 0
   cipher: auto
   name: NO189
@@ -79706,12 +80699,6 @@ proxies:
   type: vmess
   udp: true
   uuid: 0c145eb4-bbd9-4733-a459-8a147553334a
-- cipher: chacha20-ietf-poly1305
-  name: NO572
-  password: d4eeaa7b-43c6-49dc-8020-7389bba4d033
-  port: 40016
-  server: hzhz2.sssyun.xyz
-  type: ss
 - alterId: 0
   cipher: auto
   name: NO574
@@ -83407,21 +84394,6 @@ proxies:
   sni: swejs.lydurlclub.top
   type: trojan
   udp: true
-- alterId: 0
-  cipher: auto
-  name: NO4548
-  network: ws
-  port: 2095
-  server: japan.com
-  servername: c1.6016725.xyz
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 18d96190-c10f-448f-a82a-2d36df5c3cde
-  ws-opts:
-    headers:
-      Host: c1.6016725.xyz
-    path: github.com/Alvin9999
 - alterId: 0
   name: NO4552
   password: 224c91ee-7e18-4f1e-86bb-c1836f218c95
@@ -88500,6 +89472,22 @@ proxies:
     headers:
       Host: www.45174198.xyz
     path: /path/1731403283759
+- alterId: 0
+  cipher: auto
+  name: NO13136
+  network: ws
+  port: 443
+  server: 2.189.59.4
+  servername: obdii.cfd
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 05641cf5-58d2-4ba4-a9f1-b3cda0b1fb1d
+  ws-opts:
+    headers:
+      Host: obdii.cfd
+    path: /linkws
 - name: NO13162
   password: e45d355b-100c-43b6-921b-81cd60f20f39
   port: 4073
@@ -91021,6 +92009,24 @@ proxies:
   port: 5500
   server: 139.64.165.154
   type: ss
+- alterId: 0
+  cipher: auto
+  country: 🇺🇸 US
+  h2-opts: {}
+  http-opts: {}
+  name: NO16619
+  network: ws
+  port: 443
+  server: parsvds.ir
+  servername: hms19.best-tizi.top
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 62aa5f80-0328-4004-a375-7f5a59df4022
+  ws-opts:
+    headers:
+      HOST: hms19.best-tizi.top
+    path: /linkws
 - cipher: aes-256-gcm
   country: 🇺🇸US
   name: NO16629
@@ -118238,6 +119244,92 @@ proxy-groups:
   - 15|US_speednode_0142
   - 15|US_speednode_0144
   - 15|US_speednode_0145
+  - 美国(nodeshare.xyz免费节点)
+  - 美国(nodeshare.xyz免费节点) 2
+  - 美国(nodeshare.xyz免费节点) 3
+  - 美国(nodeshare.xyz免费节点) 4
+  - 美国(nodeshare.xyz免费节点) 5
+  - 美国(nodeshare.xyz免费节点) 6
+  - 美国(nodeshare.xyz免费节点) 7
+  - 美国(nodeshare.xyz免费节点) 8
+  - 美国(nodeshare.xyz免费节点) 9
+  - 美国(nodeshare.xyz免费节点) 10
+  - 美国(nodeshare.xyz免费节点) 11
+  - 美国(nodeshare.xyz免费节点) 12
+  - 美国(nodeshare.xyz免费节点) 13
+  - 美国(nodeshare.xyz免费节点) 14
+  - 美国(nodeshare.xyz免费节点) 15
+  - 美国(nodeshare.xyz免费节点) 16
+  - 美国(nodeshare.xyz免费节点) 17
+  - 美国(nodeshare.xyz免费节点) 18
+  - 美国(nodeshare.xyz免费节点) 19
+  - 美国(nodeshare.xyz免费节点) 20
+  - 美国(nodeshare.xyz免费节点) 21
+  - 美国(nodeshare.xyz免费节点) 22
+  - 美国(nodeshare.xyz免费节点) 23
+  - 美国(nodeshare.xyz免费节点) 24
+  - 美国(nodeshare.xyz免费节点) 25
+  - 美国(nodeshare.xyz免费节点) 26
+  - 美国(nodeshare.xyz免费节点) 27
+  - 美国(nodeshare.xyz免费节点) 28
+  - 美国(nodeshare.xyz免费节点) 29
+  - 乌克兰(nodeshare.xyz免费节点)
+  - 美国(nodeshare.xyz免费节点) 30
+  - 美国(nodeshare.xyz免费节点) 34
+  - 美国(nodeshare.xyz免费节点) 36
+  - 美国(nodeshare.xyz免费节点) 38
+  - 美国(nodeshare.xyz免费节点) 39
+  - 美国(nodeshare.xyz免费节点) 40
+  - 美国(nodeshare.xyz免费节点) 42
+  - 美国(nodeshare.xyz免费节点) 43
+  - 美国(nodeshare.xyz免费节点) 44
+  - 美国(nodeshare.xyz免费节点) 45
+  - 美国(nodeshare.xyz免费节点) 46
+  - 美国(nodeshare.xyz免费节点) 47
+  - 美国(nodeshare.xyz免费节点) 48
+  - 美国(nodeshare.xyz免费节点) 49
+  - 美国(nodeshare.xyz免费节点) 50
+  - 美国(nodeshare.xyz免费节点) 51
+  - 美国(nodeshare.xyz免费节点) 52
+  - 美国(nodeshare.xyz免费节点) 53
+  - 美国(nodeshare.xyz免费节点) 54
+  - 美国(nodeshare.xyz免费节点) 55
+  - 美国(nodeshare.xyz免费节点) 56
+  - 美国(nodeshare.xyz免费节点) 57
+  - 美国(nodeshare.xyz免费节点) 58
+  - 美国(nodeshare.xyz免费节点) 59
+  - 美国(nodeshare.xyz免费节点) 60
+  - 法国(nodeshare.xyz免费节点)
+  - 美国(nodeshare.xyz免费节点) 63
+  - 美国(nodeshare.xyz免费节点) 64
+  - 美国(nodeshare.xyz免费节点) 66
+  - 美国(nodeshare.xyz免费节点) 68
+  - 美国(nodeshare.xyz免费节点) 69
+  - 美国(nodeshare.xyz免费节点) 70
+  - 俄罗斯(nodeshare.xyz免费节点)
+  - 美国(nodeshare.xyz免费节点) 71
+  - 俄罗斯(nodeshare.xyz免费节点) 2
+  - 美国(nodeshare.xyz免费节点) 72
+  - 美国(nodeshare.xyz免费节点) 74
+  - 美国(nodeshare.xyz免费节点) 75
+  - 美国(nodeshare.xyz免费节点) 76
+  - 美国(nodeshare.xyz免费节点) 78
+  - 美国(nodeshare.xyz免费节点) 79
+  - 美国(nodeshare.xyz免费节点) 81
+  - 美国(nodeshare.xyz免费节点) 82
+  - 美国(nodeshare.xyz免费节点) 83
+  - 美国(nodeshare.xyz免费节点) 84
+  - 美国(nodeshare.xyz免费节点) 85
+  - 俄罗斯(nodeshare.xyz免费节点) 3
+  - 美国(nodeshare.xyz免费节点) 86
+  - 美国(nodeshare.xyz免费节点) 87
+  - 美国(nodeshare.xyz免费节点) 89
+  - 美国(nodeshare.xyz免费节点) 90
+  - 美国(nodeshare.xyz免费节点) 91
+  - 美国(nodeshare.xyz免费节点) 92
+  - 美国(nodeshare.xyz免费节点) 93
+  - 美国(nodeshare.xyz免费节点) 94
+  - 美国(nodeshare.xyz免费节点) 95
   - 🇺🇸_US_美国_1
   - US美国(mibei77.com 米贝节点分享) 11
   - US美国(mibei77.com 米贝节点分享) 16
@@ -118266,24 +119358,24 @@ proxy-groups:
   - 🇭🇰 香港01-1D
   - 🏁 ZZ_786
   - 🇨🇳 台湾 | TWN 6
+  - 🇨🇳 CN_306
+  - 🇨🇳 CN_308
   - 🇨🇳 CN_309
   - 🇨🇳 CN_310
   - 🇨🇳 CN_311
-  - 🇨🇳 CN_312
-  - 🇨🇳 CN_314
-  - 🇮🇷 IR_418
-  - 🇮🇷 IR_420
-  - 🇰🇷 KR_422
-  - 🇰🇷 KR_423
-  - 🇷🇺 RU_484
-  - 🇷🇺 RU_485
-  - 🇺🇸 US_580
-  - 🇺🇸 US_587
-  - 🇺🇸 US_597
-  - 🇺🇸 US_602
+  - 🇷🇺 RU_465
+  - 🇷🇺 RU_469
+  - 🇸🇬 SG_491
+  - 🇸🇬 SG_493
+  - 🇸🇬 SG_494
+  - 🇸🇬 SG_497
+  - 🇺🇸 US_537
+  - 🇺🇸 US_576
+  - 🇺🇸 US_606
+  - 🏁ZZ_845
+  - '[ss]🇰🇷KR1424|0.8mb/s'
   - '[ss]🇭🇰HK2887'
-  - '[vmess]🇺🇸US2941|3.4mb/s'
-  - '[vmess]🇷🇺RU3234'
+  - '[vmess]🇷🇺RU3233'
   - '[trojan]🇸🇪SE3332'
   - Relay_-🇧🇬BG_10
   - _36
@@ -118314,10 +119406,10 @@ proxy-groups:
   - Relay_-🇺🇸US_802
   - Relay_-🇺🇸US_805
   - Relay_-🇵🇱PL_814
+  - Relay_-🇺🇸US_815
   - Relay_-🇩🇪DE_820
   - Relay_-🇰🇷KR_825
   - Relay_-🇸🇬SG_842
-  - Relay_🇦🇪AE-🇦🇪AE_861
   - Relay_🇦🇪AE-🇦🇪AE_862
   - AM_865
   - BE_871
@@ -118444,6 +119536,7 @@ proxy-groups:
   - 🇺🇸 Relay_🇺🇸US-🇺🇸US_2143
   - 🇺🇸 Relay_🇺🇸US-🇺🇸US_2154
   - 🇺🇸 Relay_🇺🇸US-🇱🇺LU_2157
+  - 🇺🇸 Relay_🇺🇸US-🇺🇸US_2159
   - 🇺🇸 Relay_🇺🇸US-🇺🇸US_2166
   - 🇺🇸 Relay_🇺🇸US-🇱🇺LU_2168
   - US_2170
@@ -118453,7 +119546,6 @@ proxy-groups:
   - ZA_2205
   - Relay_🏁ZZ-🇸🇬SG_2250
   - Relay_🏁ZZ-🇺🇸US_2251
-  - ZZ_2255
   - Relay_🏁ZZ-🇩🇪DE_2256
   - ZZ_2268
   - ZZ_2273
@@ -118662,6 +119754,7 @@ proxy-groups:
   - 欧洲(油管:破解资源君2.0) 25
   - 欧洲(油管:破解资源君2.0) 26
   - 欧洲(油管:破解资源君2.0) 27
+  - 伊朗_由快嘴科技提供：kkzui.com93
   - 荷兰_由快嘴科技提供：kkzui.com118
   - 美国_由快嘴科技提供;kkzui.com92
   - 美国_由快嘴科技提供;kkzui.com110
@@ -118700,6 +119793,7 @@ proxy-groups:
   - 中转节点-19.41MB/s
   - 香港-472.9KB/s_1
   - 美国-4.74MB/s
+  - 中转节点-113.1KB/s
   - 未知国家-2.70MB/s
   - 美国-1.23MB/s
   - 香港-3.10MB/s
@@ -118823,7 +119917,6 @@ proxy-groups:
   - NO113
   - NO114
   - NO118
-  - NO119
   - NO120
   - NO123
   - NO126
@@ -118840,7 +119933,6 @@ proxy-groups:
   - NO178
   - NO179
   - NO187
-  - NO188
   - NO189
   - NO196
   - NO225
@@ -118875,7 +119967,6 @@ proxy-groups:
   - NO564
   - NO565
   - NO566
-  - NO572
   - NO574
   - NO594
   - NO604
@@ -119239,7 +120330,6 @@ proxy-groups:
   - NO4535
   - NO4538
   - NO4540
-  - NO4548
   - NO4552
   - NO4553
   - NO4556
@@ -119753,6 +120843,7 @@ proxy-groups:
   - NO13032
   - NO13080
   - NO13116
+  - NO13136
   - NO13162
   - NO13283
   - NO13363
@@ -119961,6 +121052,7 @@ proxy-groups:
   - NO16577
   - NO16585
   - NO16607
+  - NO16619
   - NO16629
   - NO16639
   - NO16643
