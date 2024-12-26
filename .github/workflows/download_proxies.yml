@@ -111,6 +111,7 @@ jobs:
     - name: retest_mihomo
       run: |
         killall mihomo
+        kill -9 $!
         nohup ./mihomo -f ./clash/config.yaml > ./clash/mihomo.log 2>&1 &
         python ./clash/proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 100 --timeout 1000 --nopush --testurl https://www.youtube.com/generate_204
 
