@@ -67,11 +67,11 @@ jobs:
     - name: test_with_lite
       run: |
         chmod +x ./proxypool/lite
-        ./proxypool/lite --config ./proxypool/config.json --test ./proxypool/config.yaml
-        cp output.txt ./proxypool/all_nodes.txt
-        base64 output.txt > ./proxypool/base64_all_nodes.txt
         ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./output.txt
         ./proxypool/lite --config ./proxypool/lite-speed.json --test ./output.txt
+        cp output.txt ./proxypool/all_nodes.txt
+        base64 output.txt > ./proxypool/base64_all_nodes.txt
+        ./proxypool/lite --config ./proxypool/config.json --test ./proxypool/config.yaml
         cp output.txt ./proxypool/speed_nodes.txt
         base64 output.txt > ./proxypool/base64_speed_nodes.txt
       # - name: retest_with_lite
@@ -102,8 +102,8 @@ jobs:
 
     - name: test_delay
       run: |
-        python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 500 --timeout 1500 --nopush --testurl https://cp.cloudflare.com/generate_204
-        ./proxypool/lite --config ./proxypool/lite-speed.json --test ./proxypool/config.yaml
+        python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 300 --timeout 1000 --nopush --testurl https://cp.cloudflare.com/generate_204
+        ./proxypool/lite --config ./proxypool/config.json --test ./proxypool/config.yaml
         cp output.txt ./proxypool/retest_nodes.txt
         base64 output.txt > ./proxypool/retest_base64.txt
 
@@ -111,7 +111,7 @@ jobs:
       run: |
         killall mihomo
         nohup ./mihomo -f ./proxypool/config.yaml > ./proxypool/mihomo.log 2>&1 &
-        python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 100 --timeout 1500 --nopush --testurl https://www.youtube.com/generate_204
+        python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 100 --timeout 1000 --nopush --testurl https://www.youtube.com/generate_204
 
     - name: 提交测速
       run: |
