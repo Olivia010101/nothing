@@ -1,4 +1,5 @@
 allow-lan: true
+bind-address: '*'
 dns:
   cache-algorithm: arc
   default-nameserver:
