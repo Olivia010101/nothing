@@ -109,7 +109,7 @@ jobs:
         base64 output.txt > ./clash/retest_base64.txt
     - name: filt_by_type
       run: |
-        cat ./clash/retest_nodes.txt | grep -E 'ss://' > ./clash/retest_ss.txt
+        cat ./clash/retest_nodes.txt | grep -E 'ss://' | grpe -v 'vmess://' > ./clash/retest_ss.txt
         base64 ./clash/retest_ss.txt > ./clash/base64_ss.txt
         cat ./clash/retest_nodes.txt | grep -E 'trojan://' > ./clash/retest_trojan.txt
         base64 ./clash/retest_trojan.txt > ./clash/base64_trojan.txt
