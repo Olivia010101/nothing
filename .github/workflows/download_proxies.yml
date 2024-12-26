@@ -35,12 +35,12 @@ jobs:
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
 
     - name: requirements
-      run: pip install -r ./requirements.txt
+      run: pip install -r ./clash/requirements.txt
 
 
     # sign netease
     - name: download_proxies_from_url
-      run: python ./proxyPool.py --download --file ./clash/config.yaml --config ./clash/default.config --urlfile ./clash/source.url --nopush
+      run: python ./clash/proxyPool.py --download --file ./clash/config.yaml --config ./clash/default.config --urlfile ./clash/source.url --nopush
     - name: 提交抓取
       run: |
         git config --local user.email "actions@github.com"
@@ -67,14 +67,14 @@ jobs:
     - name: test_with_lite
       run: |
         chmod +x ./lite
-        ./lite --config ./clash/lite-pingonly.json --test ./clash/config.yaml
-        ./lite --config ./clash/lite-speed.json --test ./output.txt
-        cp output.txt ./all_nodes.txt
-        base64 output.txt > ./base64_all_nodes.txt
+        ./clash/lite --config ./clash/lite-pingonly.json --test ./clash/config.yaml
+        ./clash/lite --config ./clash/lite-speed.json --test ./output.txt
+        cp output.txt ./clash/all_nodes.txt
+        base64 output.txt > ./clash/base64_all_nodes.txt
         ./lite --config ./clash/config.json --test ./output.txt
         ./lite --config ./clash/config.json --test ./output.txt
-        cp output.txt ./speed_nodes.txt
-        base64 output.txt > ./base64_speed_nodes.txt
+        cp output.txt ./clash/speed_nodes.txt
+        base64 output.txt > ./clash/base64_speed_nodes.txt
       # - name: retest_with_lite
       #   run: ./lite --config ./proxypool/lite-pingonly.json --test ./output.txt && ./proxypool/lite --config ./proxypool/lite-speedonly.json --test ./output.txt
 
@@ -96,23 +96,23 @@ jobs:
     - name: download_proxies_from_local_url
       run: |
         sleep 10
-        python ./proxyPool.py --download --file ./clash/config.yaml --config ./clash/default.config --urlfile ./clash/source.url.local --nopush
+        python ./clash/proxyPool.py --download --file ./clash/config.yaml --config ./clash/default.config --urlfile ./clash/source.url.local --nopush
 
     - name: run_mihomo
-      run: nohup ./mihomo -f ./config.yaml > ./clash/mihomo.log 2>&1 &
+      run: nohup ./mihomo -f ./clash/config.yaml > ./clash/mihomo.log 2>&1 &
 
     - name: test_delay
       run: |
-        python ./proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 300 --timeout 1000 --nopush --testurl https://cp.cloudflare.com/generate_204
+        python ./clash/proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 300 --timeout 1000 --nopush --testurl https://cp.cloudflare.com/generate_204
         ./lite --config ./clash/config.json --test ./clash/config.yaml
-        cp output.txt ./retest_nodes.txt
-        base64 output.txt > ./retest_base64.txt
+        cp output.txt ./clash/retest_nodes.txt
+        base64 output.txt > ./clash/retest_base64.txt
 
     - name: retest_mihomo
       run: |
         killall mihomo
         nohup ./mihomo -f ./config.yaml > ./clash/mihomo.log 2>&1 &
-        python ./proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 100 --timeout 1000 --nopush --testurl https://www.youtube.com/generate_204
+        python ./clash/proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 100 --timeout 1000 --nopush --testurl https://www.youtube.com/generate_204
 
     - name: 提交测速
       run: |
