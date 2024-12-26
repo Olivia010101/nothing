@@ -104,7 +104,7 @@ jobs:
       run: |
         python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 500 --timeout 1500 --nopush --testurl https://cp.cloudflare.com/generate_204
         ./proxypool/lite --config ./proxypool/lite-speed.json --test ./proxypool/config.yaml
-        mv output.txt ./proxypool/retest_nodes.txt
+        cp output.txt ./proxypool/retest_nodes.txt
         base64 output.txt > ./proxypool/retest_base64.txt
 
     - name: retest_mihomo
