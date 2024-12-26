@@ -8,7 +8,7 @@ def pushRepo(retry):  # 将提交推送至github
     listStatus = repo.git.status(".")
     # repo.alternates
     print(listStatus)
-    addMessage = repo.git.add(["."])
+    addMessage = repo.git.add(["./proxypool"])
     print(addMessage)
     now = datetime.now()
     formatted_time = now.strftime("%Y-%m-%d %H:%M:%S")
@@ -16,8 +16,8 @@ def pushRepo(retry):  # 将提交推送至github
     print(commitMessage)
     for i in range(retry):
         print(f"开始第{i + 1}次推送：", end="", flush=True)
-        message = repo.remotes.origin.push("main")
-
+        message = repo.remotes.origin.push()
+        # print(message)
         if not message.error:
             print("推送成功。")
             break

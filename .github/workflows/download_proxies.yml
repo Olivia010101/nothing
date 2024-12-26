@@ -35,7 +35,7 @@ jobs:
       run: sudo timedatectl set-timezone 'Asia/Shanghai'
 
     - name: requirements
-      run: pip install -r ./requirements.txt
+      run: pip install -r ./proxypool/requirements.txt
 
     # sign tencent
     # - name: tencent
@@ -43,7 +43,7 @@ jobs:
 
     # sign netease
     - name: download_proxies_from_url
-      run: python proxyPool.py --download --file ./config.yaml --config ./default.config --urlfile ./source.url
+      run: python ./proxypool/proxyPool.py --download --file ./proxypool/config.yaml --config ./proxypool/default.config --urlfile ./proxypool/source.url
 
     - name: download_mihomo
       run: wget https://github.com/MetaCubeX/mihomo/releases/download/v1.19.0/mihomo-linux-amd64-compatible-go120-v1.19.0.gz
@@ -55,17 +55,17 @@ jobs:
       run: mv mihomo-linux-amd64-compatible-go120-v1.19.0 mihomo && chmod +x mihomo
 
     - name: test_with_lite
-      run: chmod +x ./lite && ./lite --config ./config.json --test ./config.yaml
+      run: chmod +x ./proxypool/lite && ./proxypool/lite --config ./proxypool/config.json --test ./proxypool/config.yaml
     - name: retest_with_lite
-      run: ./lite --config ./lite-pingonly.json --test ./output.txt && ./lite --config ./lite-speedonly.json --test ./output.txt
+      run: ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./output.txt && ./proxypool/lite --config ./proxypool/lite-speedonly.json --test ./output.txt
 
     - name: push_output.txt
-      run: python autoPush.py
+      run: mv output.txt ./proxypool/ && python ./proxypool/autoPush.py
 
     - name: run_mihomo
-      run: nohup ./mihomo -f ./config.yaml > ./mihomo.log 2>&1 &
+      run: nohup ./mihomo -f ./proxypool/config.yaml > ./proxypool/mihomo.log 2>&1 &
 
     - name: test_delay
-      run: python proxyPool.py --delay --file ./config.yaml --config ./default.config --port 17790 --max 1000 --timeout 1500
+      run: python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 1000 --timeout 1500
 
 
