@@ -70,11 +70,11 @@ jobs:
         ./clash/lite --config ./clash/lite-pingonly.json --test ./clash/config.yaml
         ./clash/lite --config ./clash/lite-speed.json --test ./output.txt
         cp output.txt ./clash/all_nodes.txt
-        base64 output.txt > ./clash/base64_all_nodes.txt
+        base64 output.txt -w 0 > ./clash/base64_all_nodes.txt
         ./clash/lite --config ./clash/config.json --test ./output.txt
         ./clash/lite --config ./clash/config.json --test ./output.txt
         cp output.txt ./clash/speed_nodes.txt
-        base64 output.txt > ./clash/base64_speed_nodes.txt
+        base64 output.txt -w 0 > ./clash/base64_speed_nodes.txt
       # - name: retest_with_lite
       #   run: ./lite --config ./proxypool/lite-pingonly.json --test ./output.txt && ./proxypool/lite --config ./proxypool/lite-speedonly.json --test ./output.txt
 
@@ -106,17 +106,17 @@ jobs:
         python ./clash/proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 300 --timeout 1000 --nopush --testurl https://cp.cloudflare.com/generate_204
         ./clash/lite --config ./clash/config.json --test ./clash/config.yaml
         cp output.txt ./clash/retest_nodes.txt
-        base64 output.txt > ./clash/retest_base64.txt
+        base64 output.txt -w 0 > ./clash/retest_base64.txt
     - name: filt_by_type
       run: |
         cat ./clash/retest_nodes.txt | grep -E 'ss://' | grep -v 'vmess://' > ./clash/retest_ss.txt
-        base64 ./clash/retest_ss.txt > ./clash/base64_ss.txt
+        base64 ./clash/retest_ss.txt -w 0 > ./clash/base64_ss.txt
         cat ./clash/retest_nodes.txt | grep -E 'trojan://' > ./clash/retest_trojan.txt
-        base64 ./clash/retest_trojan.txt > ./clash/base64_trojan.txt
+        base64 ./clash/retest_trojan.txt -w 0 > ./clash/base64_trojan.txt
         cat ./clash/retest_nodes.txt | grep -E 'vmess://' > ./clash/retest_vmess.txt
-        base64 ./clash/retest_vmess.txt > ./clash/base64_vmess.txt
+        base64 ./clash/retest_vmess.txt -w 0 > ./clash/base64_vmess.txt
         cat ./clash/retest_nodes.txt | grep -E 'ssr://' > ./clash/retest_ssr.txt
-        base64 ./clash/retest_ssr.txt > ./clash/base64_ssr.txt
+        base64 ./clash/retest_ssr.txt -w 0 > ./clash/base64_ssr.txt
     - name: 提交base64文件
       run: |
         git config --local user.email "actions@github.com"
