@@ -41,6 +41,17 @@ jobs:
     # sign netease
     - name: download_proxies_from_url
       run: python ./proxypool/proxyPool.py --download --file ./proxypool/config.yaml --config ./proxypool/default.config --urlfile ./proxypool/source.url --nopush
+    - name: 提交抓取
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git pull origin main
+        git add proxypool/
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 抓取节点"
+    - name: 推送抓取
+      uses: ad-m/github-push-action@master
+      with:
+        branch: main
 
     - name: download_mihomo
       run: wget https://github.com/MetaCubeX/mihomo/releases/download/v1.19.0/mihomo-linux-amd64-compatible-go120-v1.19.0.gz
@@ -58,7 +69,7 @@ jobs:
         chmod +x ./proxypool/lite
         ./proxypool/lite --config ./proxypool/config.json --test ./proxypool/config.yaml
         ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./output.txt
-        ./proxypool/lite --config ./proxypool/lite-speedonly.json --test ./output.txt
+        ./proxypool/lite --config ./proxypool/lite-speed.json --test ./output.txt
       # - name: retest_with_lite
       #   run: ./proxypool/lite --config ./proxypool/lite-pingonly.json --test ./output.txt && ./proxypool/lite --config ./proxypool/lite-speedonly.json --test ./output.txt
 
@@ -72,14 +83,14 @@ jobs:
       run: python ./proxypool/proxyPool.py --delay --file ./proxypool/config.yaml --config ./proxypool/default.config --port 17790 --max 1000 --timeout 1500 --nopush
 
 
-    - name: 提交
+    - name: 提交测试
       run: |
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
         git pull origin main
         mv output.txt ./proxypool/
         git add proxypool/
-        git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 抓取节点"
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 测速"
     - name: 推送更改
       uses: ad-m/github-push-action@master
       with:
