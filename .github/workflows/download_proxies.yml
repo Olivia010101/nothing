@@ -75,6 +75,20 @@ jobs:
 
       #   # - name: push_output.txt
       #   #   run: mv output.txt ./proxypool/ && python ./proxypool/autoPush.py
+    - name: download_proxies_from_local_url
+      run: python ./proxypool/proxyPool.py --download --file ./proxypool/config.yaml --config ./proxypool/default.config --urlfile ./proxypool/source.url.local --nopush
+    - name: 提交lite筛选
+      run: |
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
+        git pull origin main
+        git add proxypool/
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 抓取节点"
+    - name: 推送lite筛选
+      uses: ad-m/github-push-action@master
+      with:
+        branch: main
+
 
     - name: run_mihomo
       run: nohup ./mihomo -f ./proxypool/config.yaml > ./proxypool/mihomo.log 2>&1 &
