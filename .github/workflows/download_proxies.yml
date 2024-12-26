@@ -1,0 +1,71 @@
+name: download_proxies
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  # push:
+    # branches: [ "master" ]
+  # pull_request:
+    # branches: [ "master" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  schedule:
+    - cron: '0 9,21 * * *'
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+    # - name: cache
+      # uses: actions/cache@v3
+      # with:
+        # path: ~/.cache/pip
+        # key: ${{ runner.os }}-pip-${{ hashFiles('**/run_in_Actions/requirements.txt') }}
+        # restore-keys: |
+          # ${{ runner.os }}-pip-
+
+    - name: Timezone
+      run: sudo timedatectl set-timezone 'Asia/Shanghai'
+
+    - name: requirements
+      run: pip install -r ./requirements.txt
+
+    # sign tencent
+    # - name: tencent
+    # run: python ./utils/v2free/tencent.py
+
+    # sign netease
+    - name: download_proxies_from_url
+      run: python proxyPool.py --download --file ./config.yaml --config ./default.config --urlfile ./source.url
+
+    - name: download_mihomo
+      run: wget https://github.com/MetaCubeX/mihomo/releases/download/v1.19.0/mihomo-linux-amd64-compatible-go120-v1.19.0.gz
+
+    - name: extract_mihomo
+      run: gzip -d mihomo-linux-amd64-compatible-go120-v1.19.0.gz
+
+    - name: add_execuable
+      run: mv mihomo-linux-amd64-compatible-go120-v1.19.0 mihomo && chmod +x mihomo
+
+    - name: test_with_lite
+      run: chmod +x ./lite && ./lite --config ./config.json --test ./config.yaml
+    - name: retest_with_lite
+      run: ./lite --config ./lite-pingonly.json --test ./output.txt && ./lite --config ./lite-speedonly.json --test ./output.txt
+
+    - name: push_output.txt
+      run: python autoPush.py
+
+    - name: run_mihomo
+      run: nohup ./mihomo -f ./config.yaml > ./mihomo.log 2>&1 &
+
+    - name: test_delay
+      run: python proxyPool.py --delay --file ./config.yaml --config ./default.config --port 17790 --max 1000 --timeout 1500
+
+

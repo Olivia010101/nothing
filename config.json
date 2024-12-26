@@ -1,0 +1,14 @@
+{
+  "group": "Default",
+  "speedtestMode": "pingonly",
+  "pingMethod": "googleping",
+  "sortMethod": "rspeed",
+  "concurrency": 1024,
+  "testMode": 2,
+  "timeout": 15,
+  "fontSize": 24,
+  "outputMode": 4,
+  "unique": true,
+  "language": "en",
+  "theme": "rainbow"
+}

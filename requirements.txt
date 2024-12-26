@@ -1,0 +1,6 @@
+aiohttp
+pyyaml
+requests
+logging
+asyncio
+gitpython
