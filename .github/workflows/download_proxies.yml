@@ -115,10 +115,12 @@ jobs:
         base64 ./clash/retest_trojan.txt > ./clash/base64_trojan.txt
         cat ./clash/retest_nodes.txt | grep -E 'vmess://' > ./clash/retest_vmess.txt
         base64 ./clash/retest_vmess.txt > ./clash/base64_vmess.txt
+        cat ./clash/retest_nodes.txt | grep -E 'ssr://' > ./clash/retest_ssr.txt
+        base64 ./clash/retest_ssr.txt > ./clash/base64_ssr.txt
     - name: retest_mihomo
       run: |
         killall mihomo
-        kill $!
+        kill -s KILL $!
         nohup ./mihomo -f ./clash/config.yaml > ./clash/mihomo.log 2>&1 &
         python ./clash/proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 100 --timeout 1000 --nopush --testurl https://www.youtube.com/generate_204
 
