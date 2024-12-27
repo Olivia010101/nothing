@@ -109,14 +109,14 @@ jobs:
         base64 output.txt -w 0 > ./clash/retest_base64.txt
     - name: filt_by_type
       run: |
-        cat ./clash/retest_nodes.txt | grep -E 'ss://' | grep -v 'vmess://' > ./clash/retest_ss.txt
+        cat clash/speed_nodes.txt | grep -v "vmess://" | grep "ss://" > ./clash/retest_ss.txt
         base64 ./clash/retest_ss.txt -w 0 > ./clash/base64_ss.txt
         cat ./clash/retest_nodes.txt | grep -E 'trojan://' > ./clash/retest_trojan.txt
         base64 ./clash/retest_trojan.txt -w 0 > ./clash/base64_trojan.txt
         cat ./clash/retest_nodes.txt | grep -E 'vmess://' > ./clash/retest_vmess.txt
         base64 ./clash/retest_vmess.txt -w 0 > ./clash/base64_vmess.txt
-        cat ./clash/retest_nodes.txt | grep -E 'ssr://' > ./clash/retest_ssr.txt
-        base64 ./clash/retest_ssr.txt -w 0 > ./clash/base64_ssr.txt
+        # cat ./clash/retest_nodes.txt | grep -E 'ssr://' > ./clash/retest_ssr.txt
+        # base64 ./clash/retest_ssr.txt -w 0 > ./clash/base64_ssr.txt
     - name: 提交base64文件
       run: |
         git config --local user.email "actions@github.com"
