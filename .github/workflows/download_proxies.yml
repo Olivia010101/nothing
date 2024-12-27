@@ -103,37 +103,38 @@ jobs:
 
     - name: test_delay
       run: |
-        python ./clash/proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 300 --timeout 1000 --nopush --testurl https://cp.cloudflare.com/generate_204
+        # python ./clash/proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 300 --timeout 1000 --nopush --testurl https://cp.cloudflare.com/generate_204
+        python ./clash/proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 300 --timeout 1000 --nopush --testurl https://google.com
         ./clash/lite --config ./clash/config.json --test ./clash/config.yaml
         cp output.txt ./clash/retest_nodes.txt
         base64 output.txt -w 0 > ./clash/retest_base64.txt
-    - name: filt_by_type
-      run: |
-        cat clash/speed_nodes.txt | grep -v "vmess://" | grep "ss://" > ./clash/retest_ss.txt
-        base64 ./clash/retest_ss.txt -w 0 > ./clash/base64_ss.txt
-        cat ./clash/retest_nodes.txt | grep -E 'trojan://' > ./clash/retest_trojan.txt
-        base64 ./clash/retest_trojan.txt -w 0 > ./clash/base64_trojan.txt
-        cat ./clash/retest_nodes.txt | grep -E 'vmess://' > ./clash/retest_vmess.txt
-        base64 ./clash/retest_vmess.txt -w 0 > ./clash/base64_vmess.txt
+        # - name: filt_by_type
+        #   run: |
+        #     cat clash/speed_nodes.txt | grep -v "vmess://" | grep "ss://" > ./clash/retest_ss.txt
+        #     base64 ./clash/retest_ss.txt -w 0 > ./clash/base64_ss.txt
+        #     cat ./clash/retest_nodes.txt | grep -E 'trojan://' > ./clash/retest_trojan.txt
+        #     base64 ./clash/retest_trojan.txt -w 0 > ./clash/base64_trojan.txt
+        #     cat ./clash/retest_nodes.txt | grep -E 'vmess://' > ./clash/retest_vmess.txt
+        #     base64 ./clash/retest_vmess.txt -w 0 > ./clash/base64_vmess.txt
         # cat ./clash/retest_nodes.txt | grep -E 'ssr://' > ./clash/retest_ssr.txt
         # base64 ./clash/retest_ssr.txt -w 0 > ./clash/base64_ssr.txt
-    - name: 提交base64文件
-      run: |
-        git config --local user.email "actions@github.com"
-        git config --local user.name "GitHub Actions"
-        git pull origin main
-        git add clash
-        git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 测速"
-    - name: 推送base64文件
-      uses: ad-m/github-push-action@master
-      with:
-        branch: main
-        # kill $!
-    - name: rerun_mihomo
-      run: killall mihomo && nohup ./mihomo -f ./clash/config.yaml > ./clash/mihomo.log 2>&1 &
+        # - name: 提交base64文件
+        #   run: |
+        #     git config --local user.email "actions@github.com"
+        #     git config --local user.name "GitHub Actions"
+        #     git pull origin main
+        #     git add clash
+        #     git commit -m "$(date '+%Y-%m-%d %H:%M:%S') 测速"
+        # - name: 推送base64文件
+        #   uses: ad-m/github-push-action@master
+        #   with:
+        #     branch: main
+        #     # kill $!
+        # - name: rerun_mihomo
+        #   run: killall mihomo && nohup ./mihomo -f ./clash/config.yaml > ./clash/mihomo.log 2>&1 &
 
-    - name: retest_mihomo
-      run: python ./clash/proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 200 --timeout 1000 --nopush --testurl https://www.youtube.com/generate_204
+        # - name: retest_mihomo
+        #   run: python ./clash/proxyPool.py --delay --file ./clash/config.yaml --config ./clash/default.config --port 17790 --max 200 --timeout 1000 --nopush --testurl https://www.youtube.com/generate_204
 
     - name: 提交测速
       run: |
