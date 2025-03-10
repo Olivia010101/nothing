@@ -15,7 +15,7 @@ html = etree.HTML(html_content)
 target_xpath = '//*[@id="paging-aa"]/div[1]/div[2]/h2/a'  # 示例XPath路径
 
 # 获取目标元素的值
-# elements = print(len(elements))
+elements = print(len(elements))
 new_url = html.xpath(target_xpath)[0].attrib["href"]  # 获取属性值
 
 response = requests.get(new_url)
