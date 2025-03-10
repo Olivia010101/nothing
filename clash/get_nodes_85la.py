@@ -2,11 +2,15 @@ import requests
 import yaml
 from lxml import etree
 
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+}
+
 # 目标网页URL
 url = "https://www.85la.com/internet-access/free-network-nodes"
 
 # 发送HTTP请求获取网页内容
-response = requests.get(url)
+response = requests.get(url,headers=headers)
 print(response)
 html_content = response.text
 
@@ -26,14 +30,14 @@ new_url = node_lists[0].attrib["href"]  # 获取属性值
 print(new_url)
 
 
-response = requests.get(new_url)
+response = requests.get(new_url,headers=headers)
 html_content = response.text
 html = etree.HTML(html_content)
 target_xpath = '//*[@id="md_content_2"]/div/div[5]/div[3]/p/a'
 subscript_url = html.xpath(target_xpath)[0].text.strip()
 
 
-response = requests.get(subscript_url)
+response = requests.get(subscript_url,headers=headers)
 response.raise_for_status()
 yaml_content = yaml.safe_load(response.text)
 
