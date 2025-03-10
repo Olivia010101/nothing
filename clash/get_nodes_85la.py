@@ -7,6 +7,7 @@ url = "https://www.85la.com/internet-access/free-network-nodes"
 
 # 发送HTTP请求获取网页内容
 response = requests.get(url)
+print(response)
 html_content = response.text
 
 # 使用lxml解析HTML
